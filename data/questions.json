@@ -7,7 +7,7 @@
 {"id": "mathematics", "question": "What is 3 cubed (3*3)?", "answer": "27"},
 {"id": "mathematics", "question": "What is the value of π (pi) approximately?", "answer": "3.14"},
 {"id": "mathematics", "question": "What is 15% of 200?", "answer": "30"},
-{"id": "mathematics", "question": "What is 7²?", "answer": "49"},
+{"id": "mathematics", "question": "What is 7*2?", "answer": "49"},
 {"id": "mathematics", "question": "What is 0 divided by any number (except 0)?", "answer": "0"},
 {"id": "mathematics", "question": "What is 20 - 7 x 2?", "answer": "6"},
 {"id": "science", "question": "What planet is known as the Red Planet?", "answer": "Mars"},

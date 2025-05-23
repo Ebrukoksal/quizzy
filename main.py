@@ -1,6 +1,7 @@
 import streamlit as st
 import json
 import random
+import time
 
 st.title("QUIZZY")
 
@@ -65,14 +66,19 @@ if st.session_state.quiz_started and st.session_state.quiz_questions:
     
     st.write(f"Question: {current_q['question']}")
     
-    user_answer = st.text_input("Your answer:").strip().lower()
+    user_answer = st.text_input("Your answer:", key=f"question_{st.session_state.current_question}").strip().lower()
+    placeholder = st.empty()
     
     if st.button("Submit Answer"):
         if user_answer == current_q['answer'].lower():
-            st.success("Correct!")
             st.session_state.score += 1
+            st.success("The answer is correct!")
+            placeholder.empty()
+            time.sleep(2)
         else:
             st.error(f"Wrong! The correct answer was: {current_q['answer']}")
+            placeholder.empty()
+            time.sleep(2)
         
         # Move to next question or end quiz
         if st.session_state.current_question < len(st.session_state.quiz_questions) - 1:
